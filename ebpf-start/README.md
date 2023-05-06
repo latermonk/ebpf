@@ -3,6 +3,10 @@
 ##  start a vm
 ```
 vagrant init ubuntu/impish64 // 21.10
+
+22.04  ubuntu/jammy64
+
+vagrant init ubuntu/jammy64 // 22.04
 ```
 
 ## install lib
