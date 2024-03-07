@@ -7,15 +7,7 @@ sudo apt update
 sudo apt install clang llvm git vim wget -y
 ```
 
-
-```shell
-git clone --recurse-submodules https://github.com/libbpf/bpftool.git
-cd src
-make
-sudo make install
-```
-
-golang:
+Install golang:
 ```shell
 wget https://go.dev/dl/go1.22.1.linux-arm64.tar.gz
 ```
@@ -33,7 +25,7 @@ export PATH=$PATH:/usr/local/go/bin
  go version
 ```
 
-
+---
 
 ## Install bpftool
 ```shell
