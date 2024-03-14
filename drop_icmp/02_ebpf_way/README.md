@@ -43,6 +43,11 @@ apt install linux-headers-`uname -r`
 ```
 
 根据实际情况做链接
+ARM64
+```
+ln -s /usr/include/aarch64-linux-gnu/asm/  /usr/include/asm
+```
+X86-64
 ```shell
 sudo ln -s /usr/include/x86_64-linux-gnu/asm /usr/include/asm
 ```
