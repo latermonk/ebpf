@@ -3,8 +3,9 @@
 
 
 ##  A Beginner's Guide to eBPF Programming for Networking - Liz Rice, Isovalent 
-1.  https://www.youtube.com/watch?v=0p987hCplbk
-2.  https://speakerdeck.com/lizrice/beginners-guide-to-ebpf-programming-for-networking
+1.  video  https://www.youtube.com/watch?v=0p987hCplbk   
+2.  PPT    https://speakerdeck.com/lizrice/beginners-guide-to-ebpf-programming-for-networking
+3.  code   https://github.com/lizrice/ebpf-networking   
     
 
 
