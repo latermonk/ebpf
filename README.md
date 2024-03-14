@@ -17,3 +17,8 @@ https://github.com/lizrice/learning-ebpf/tree/main
 # Hello World
 https://bowers.github.io/eBPF-Hello-World/
 
+
+
+# Blogs
+## gregg
+https://brendangregg.com/    
