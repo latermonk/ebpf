@@ -83,6 +83,14 @@ http://hubble-ui.127.0.0.1.nip.io
 
 
 ---
+# Test Google's microservice demo
+```
+k create ns google
+```
+
+```
+k -n google apply -f  ./kubernetes-manifests.yaml
+```
 
 ---
 # Reference:
