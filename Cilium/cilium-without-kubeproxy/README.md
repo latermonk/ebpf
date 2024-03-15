@@ -96,6 +96,72 @@ k create ns google
 k -n google apply -f  ./kubernetes-manifests.yaml
 ```
 
+
+
+---
+# kind install metallb
+
+```
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+```
+
+
+```
+kubectl wait --namespace metallb-system \
+                --for=condition=ready pod \
+                --selector=app=metallb \
+                --timeout=90s
+```
+
+```
+docker network inspect -f '{{.IPAM.Config}}' kind
+```
+
+metallb-config.yaml
+```
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: example
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.228.200-192.168.228.250
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: empty
+  namespace: metallb-system
+```
+
+```
+kubectl apply -f  above-metallb-config.yaml-file
+
+```
+
+
+Test:
+```
+kubectl apply -f https://kind.sigs.k8s.io/examples/loadbalancer/usage.yaml
+```
+
+
+```
+LB_IP=$(kubectl get svc/foo-service -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
+```
+
+```
+# should output foo and bar on separate lines 
+for _ in {1..10}; do
+  curl ${LB_IP}:5678
+done
+```
+
+
+
+
+
 ---
 # Reference:
 https://medium.com/@charled.breteche/kind-cluster-with-cilium-and-no-kube-proxy-c6f4d84b5a9d     
@@ -105,4 +171,6 @@ https://kind.sigs.k8s.io/docs/user/ingress/
 https://github.com/GoogleCloudPlatform/microservices-demo  
 
 https://docs.cilium.io/en/latest/network/kubernetes/kubeproxy-free/  
+
+https://kind.sigs.k8s.io/docs/user/loadbalancer/  
 
