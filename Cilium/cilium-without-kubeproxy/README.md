@@ -81,6 +81,16 @@ http://hubble-ui.127.0.0.1.nip.io
 
 
 
+
+---
+
 ---
 # Reference:
 https://medium.com/@charled.breteche/kind-cluster-with-cilium-and-no-kube-proxy-c6f4d84b5a9d     
+
+https://kind.sigs.k8s.io/docs/user/ingress/  
+
+https://github.com/GoogleCloudPlatform/microservices-demo  
+
+https://docs.cilium.io/en/latest/network/kubernetes/kubeproxy-free/  
+
