@@ -33,6 +33,10 @@ EOF
 ```
 
 
+```
+kubectl cluster-info --context kind-kind
+```
+
 ## Install Cilium with Hubble UI enabled and accessible under hubble-ui.127.0.0.1.nip.io ingress
 
 ```
