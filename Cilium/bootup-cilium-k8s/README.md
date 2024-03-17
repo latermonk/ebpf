@@ -1,6 +1,5 @@
 #  Kind cluster with Cilium and no kube-proxy
 
-
 ## Create a kind k8s cluster
 
 ```
@@ -69,7 +68,7 @@ EOF
 ```
 
 
-## Install ingress-nginx ingress controller
+# Install ingress-nginx ingress controller
 ```
 kubectl apply -f  deploy.yaml
 ```
@@ -85,7 +84,7 @@ http://hubble-ui.127.0.0.1.nip.io
 
 
 
----
+
 # kind install metallb
 
 ```
