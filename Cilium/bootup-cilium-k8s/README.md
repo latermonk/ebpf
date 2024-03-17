@@ -126,7 +126,7 @@ metadata:
 ```
 
 ```
-kubectl apply -f  above-metallb-config.yaml-file
+kubectl apply -f  above-metallb-config.yaml
 
 ```
 
