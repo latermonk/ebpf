@@ -1,7 +1,11 @@
 # limactl vm
 
 ```
-limactl start https://raw.githubusercontent.com/lizrice/learning-ebpf/main/learning-ebpf.yaml
+wget https://raw.githubusercontent.com/lizrice/learning-ebpf/main/learning-ebpf.yaml
+```
+
+```
+limactl start xdp.yaml
 ```
 
 
