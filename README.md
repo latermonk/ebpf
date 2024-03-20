@@ -1,3 +1,13 @@
+# limactl vm
+
+```
+limactl start https://raw.githubusercontent.com/lizrice/learning-ebpf/main/learning-ebpf.yaml
+```
+
+
+
+
+
 # ebpf
 
 https://ebpf.io/  
