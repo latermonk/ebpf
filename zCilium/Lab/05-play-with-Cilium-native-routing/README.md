@@ -1,0 +1,1 @@
+https://medium.com/@nahelou.j/play-with-cilium-native-routing-in-kind-cluster-5a9e586a81ca   
