@@ -109,6 +109,7 @@ docker network inspect -f '{{.IPAM.Config}}' kind
 
 metallb-config.yaml
 ```
+kubectl apply -f - <<EOF
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
@@ -123,6 +124,7 @@ kind: L2Advertisement
 metadata:
   name: empty
   namespace: metallb-system
+EOF
 ```
 
 ```
