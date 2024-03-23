@@ -1,7 +1,7 @@
 
 # 
 ```
-kind create cluster --config=kind-config.yaml`
+kind create cluster --config=kind-config.yaml
 ```
 
 
