@@ -2,6 +2,14 @@
 
 
 
+# tranditional network vs cilium network
+![](./_image/kube-proxy-network.png)
+
+![](./_image/kube-proxy-replacement.png)
+
+
+
+
 # Cilium Lab - solo [lab inside]
 https://academy.solo.io/learn/courses/8/introduction-to-cilium/lessons   
 
