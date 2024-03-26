@@ -52,3 +52,11 @@ https://cilium.io/
 # Blogs
 ## gregg
 https://brendangregg.com/    
+
+
+---
+# XDP
+* Tutorial: Zoom on Cilium: An Interactive Tutorial to Learn How to Reshape the Traffic using eBPF - XDP   
+https://static.sched.com/hosted_files/ossjapan2022/55/Zoom%20on%20Cilium_%20An%20Interactive%20Tutorial%20to%20Learn%20how%20to%20Reshape%20The%20Traffic%20using%20eBPF%20-%20XDP.pptx.pdf   
+
+https://www.youtube.com/watch?v=82WKb5K_7MY  
