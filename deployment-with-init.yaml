@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-with-init
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: busybox-init
+  template:
+    metadata:
+      labels:
+        app: busybox-init
+    spec:
+      initContainers:
+        - name: hello-init
+          image: busybox:latest
+          command: ['sh', '-c']
+          args:
+            - echo "Hello, World!"; 
+              echo "Init container completed.";
+      containers:
+        - name: main-app
+          image: busybox:latest
+          command: ['sh', '-c']
+          args:
+            - echo "Main container started at $(date)";
+              while true; do
+                sleep 30;
+                echo "Still running at $(date)";
+              done;
