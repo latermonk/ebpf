@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: busybox
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      initContainers:
+      - name: init-hello
+        image: busybox:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - echo "Hello from init container!"
+      containers:
+      - name: busybox
+        image: busybox:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            echo "BusyBox started at $(date)"
+            trap 'echo "Caught signal, exiting..."; exit 0' SIGTERM SIGINT
+            while true; do
+              sleep 30
+              echo "Still alive at $(date)"
+            done
